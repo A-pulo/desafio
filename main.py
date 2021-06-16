@@ -95,11 +95,12 @@ def send_mail(l_path):
 
     usuario: str = input('Digite o endereço de envio do e-mail:\n')
     senha: str = input('Digite a senha do e-mail:\n')
+    destinatario: str = input('Digite o e-mail do destinatário:\n')
 
     msg: MIMEMultipart = scan_dir(l_path)
-    msg['to'] = usuario
+    msg['to'] = destinatario
     msg['from'] = usuario
-    msg['subject'] = 'Default'
+    msg['subject'] = 'Arquivos'
 
     servidor = SMTP_SSL('smtp.gmail.com', 465)
     servidor.login(usuario, senha)
