@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../GamePy/.idea/GamePy.iml" filepath="$PROJECT_DIR$/../GamePy/.idea/GamePy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cursinho/.idea/cursinho.iml" filepath="$PROJECT_DIR$/../cursinho/.idea/cursinho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/desafio.iml" filepath="$PROJECT_DIR$/.idea/desafio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../nRainhas/.idea/nRainhas.iml" filepath="$PROJECT_DIR$/../nRainhas/.idea/nRainhas.iml" />
+    </modules>
+  </component>
+</project>
