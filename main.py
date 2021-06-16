@@ -12,8 +12,8 @@ from email.mime.multipart import MIMEMultipart
 
 def main() -> None:
     __path: str = f'{os.environ["USERPROFILE"]}\\Downloads\\arqs\\'
-    limpar_diretorios(__path)
     gerar_pasta(__path)
+    limpar_diretorios(__path)
     gerar_arquivos(__path)
     renomear_arquivos(__path)
     compactar(__path)
@@ -80,15 +80,14 @@ def date_path(l_path) -> str:
 
 
 def compactar(l_path):
-    diretorio = os.listdir(l_path)
+    diretorio = get_flist(l_path)
     for i in range(10):
         nome = os.path.join(date_path(l_path), f'arquivos{i}.zip')
         with ZipFile(nome, 'w') as arqzip:
             for j in range(10):
                 arquivo = diretorio.pop(0)
-                if os.path.isfile(arquivo):
-                    with open(f'{l_path}{arquivo}') as dados:
-                        arqzip.writestr(arquivo, dados.read())
+                with open(f'{l_path}{arquivo}') as dados:
+                    arqzip.writestr(arquivo, dados.read())
     limpar_diretorio(l_path)
 
 
